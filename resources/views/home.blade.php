@@ -6,20 +6,20 @@
     </div>
 
     <div class="jumbotron text-center">
-        <div class="logo"><img src="{{ asset('images/laravelio.png') }}" title="Laravel.io"></div>
-        <h2>The Laravel Community Portal</h2>
+        <div class="logo"><img src="{{ asset('images/postcardgo.png') }}" title="postcardgo.com"></div>
+        <h2>Pay $ 4.99 ,A Wooden Postcard Will Fly To U From China!</h2>
 
         <div style="margin-top:40px">
             @if (Auth::guest())
                 <a class="btn btn-primary" href="{{ route('register') }}">
-                    Join the Community
+                    Join Us
                 </a>
                 <a class="btn btn-default" href="{{ route('forum') }}">
                     Visit the Forum
                 </a>
             @else
                 <a class="btn btn-default" href="{{ route('threads.create') }}">
-                    Start a Thread
+                    Start
                 </a>
             @endif
         </div>
