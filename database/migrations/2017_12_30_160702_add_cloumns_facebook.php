@@ -14,9 +14,8 @@ class AddCloumnsFacebook extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('facebook_id', 160)->default('');
-            $table->string('facebook_username', 160)->default('');
-            $table->string('bio', 160)->default('');
+            $table->string('facebook_id', 64)->default('');
+            $table->string('facebook_username',64)->default('');
         });
     }
 
@@ -28,7 +27,8 @@ class AddCloumnsFacebook extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->dropColumn("facebook_id");
+            $table->dropColumn("facebook_username");
         });
     }
 }
