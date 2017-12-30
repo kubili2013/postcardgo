@@ -7,7 +7,7 @@
 
     <div class="jumbotron text-center">
         <div class="logo"><img src="{{ asset('images/postcardgo.png') }}" title="postcardgo.com"></div>
-        <h2>Pay $ 4.99 ,A Wooden Postcard Will Fly To U From China!</h2>
+        <h2>Pay $ 4.99, A Wooden Postcard From China Will Fly To U !</h2>
 
         <div style="margin-top:40px">
             @if (Auth::guest())

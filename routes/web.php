@@ -30,6 +30,9 @@ Route::group(['namespace' => 'Auth'], function () {
     // Social authentication
     Route::get('login/github', ['as' => 'login.github', 'uses' => 'GithubController@redirectToProvider']);
     Route::get('auth/github', 'GithubController@handleProviderCallback');
+    Route::get('login/facebook', ['as' => 'login.facebook', 'uses' => 'FacebookController@redirectToProvider']);
+    Route::get('auth/facebook', 'FacebookController@handleProviderCallback');
+
 });
 
 // Users

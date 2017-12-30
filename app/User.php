@@ -37,6 +37,8 @@ class User extends Authenticatable
         'confirmation_code',
         'github_id',
         'github_username',
+        'facebook_id',
+        'facebook_username',
         'type',
         'remember_token',
         'bio',
@@ -235,6 +237,11 @@ class User extends Authenticatable
     public static function findByGithubId(string $githubId): self
     {
         return static::where('github_id', $githubId)->firstOrFail();
+    }
+
+    public static function findByFacebookId(string $facebookId): self
+    {
+        return static::where('facebook_id', $facebookId)->firstOrFail();
     }
 
     public function delete()

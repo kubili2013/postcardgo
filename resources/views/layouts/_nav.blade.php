@@ -27,7 +27,7 @@
                     <ul class="dropdown-menu">
                         {{--<li><a href="https://github.com/laravelio"><i class="fa fa-github"></i> Github</a></li>--}}
                         <li><a href="https://twitter.com/postcardgo"><i class="fa fa-twitter"></i> Twitter</a></li>
-                        <li><a href="https://www.facebook.com/postcardgodotcom"><i class="fa fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.facebook.com/postcardgogo/"><i class="fa fa-facebook"></i> Facebook</a></li>
                         {{--<li><a href="https://medium.com/laravelio"><i class="fa fa-medium"></i> Medium</a></li>--}}
                         {{--<li role="separator" class="divider"></li>--}}
                         {{--<li><a href="https://laravel.com">Laravel</a></li>--}}
