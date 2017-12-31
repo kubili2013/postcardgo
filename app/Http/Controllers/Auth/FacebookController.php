@@ -49,11 +49,11 @@ class FacebookController extends Controller
 
     private function userNotFound(FacebookUser $user): RedirectResponse
     {
-        if ($user->isTooYoung()) {
-            $this->error('errors.facebook_account_too_young');
-
-            return redirect()->home();
-        }
+//        if ($user->isTooYoung()) {
+//            $this->error('errors.facebook_account_too_young');
+//
+//            return redirect()->home();
+//        }
 
         return $this->redirectUserToRegistrationPage($user);
     }
