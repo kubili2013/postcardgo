@@ -47,7 +47,7 @@ class FacebookController extends Controller
         return redirect()->route('dashboard');
     }
 
-    private function userNotFound(GithubUser $user): RedirectResponse
+    private function userNotFound(FacebookUser $user): RedirectResponse
     {
         if ($user->isTooYoung()) {
             $this->error('errors.facebook_account_too_young');
