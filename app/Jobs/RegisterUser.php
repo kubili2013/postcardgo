@@ -44,7 +44,19 @@ class RegisterUser
      */
     private $githubUsername;
 
-    public function __construct(string $name, string $email, string $username, string $ip, string $githubId, string $githubUsername)
+    /**
+     * @var string
+     */
+    private $facebookId;
+
+    /**
+     * @var string
+     */
+    private $facebookUsername;
+
+    public function __construct(string $name, string $email,
+                                string $username, string $ip, string $githubId, string $githubUsername,
+                                string $facebookId, string $facebookUsername)
     {
         $this->name = $name;
         $this->email = $email;
@@ -52,6 +64,8 @@ class RegisterUser
         $this->ip = $ip;
         $this->githubId = $githubId;
         $this->githubUsername = $githubUsername;
+        $this->facebookId = $facebookId;
+        $this->facebookUsername = $facebookUsername;
     }
 
     public static function fromRequest(RegisterRequest $request): self
@@ -62,7 +76,9 @@ class RegisterUser
             $request->username(),
             $request->ip(),
             $request->githubId(),
-            $request->githubUsername()
+            $request->githubUsername(),
+            $request->facebookId(),
+            $request->facebookUsername()
         );
     }
 
@@ -78,6 +94,8 @@ class RegisterUser
             'ip' => $this->ip,
             'github_id' => $this->githubId,
             'github_username' => $this->githubUsername,
+            'facebook_id' => $this->githubId,
+            'facebook_username' => $this->githubUsername,
             'confirmation_code' => str_random(60),
             'type' => User::DEFAULT,
             'remember_token' => '',
