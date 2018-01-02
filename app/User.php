@@ -41,6 +41,7 @@ class User extends Authenticatable
         'facebook_username',
         'type',
         'remember_token',
+        'avatar',
         'bio',
     ];
 
@@ -84,12 +85,12 @@ class User extends Authenticatable
         // $hash = md5(strtolower(trim($this->email)));
         // $default = urlencode(route('avatar', ['username' => $this->username()]));
 
-        return $this->avatar;
+        return $this->avatar == null ? "":$this->avatar;
     }
 
     public function avatar(): string
     {
-        return $this->avatar;
+        return $this->avatar == null ? "":$this->avatar;
     }
 
     public function intercomHash(): string
