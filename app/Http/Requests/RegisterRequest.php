@@ -58,8 +58,9 @@ class RegisterRequest extends FormRequest
 
     public function facebookUsername(): string
     {
-        return $this->get('facebook_username', '');
+        return $this->get('facebook_username') == null ?  $this->get('username') : $this->get('facebook_username');
     }
+
     public function avatar(): string
     {
         return $this->get('avatar', 'images/default_avatar.png');
