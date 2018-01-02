@@ -22,6 +22,7 @@ class RegisterRequest extends FormRequest
             'third_type' => 'required|in:facebook,github',
             'facebook_username' => 'max:64',
             'github_username' => 'max:64',
+            'avatar' => 'max:255',
         ];
     }
 
@@ -58,5 +59,9 @@ class RegisterRequest extends FormRequest
     public function facebookUsername(): string
     {
         return $this->get('facebook_username', '');
+    }
+    public function avatar(): string
+    {
+        return $this->get('avatar', 'images/default_avatar.png');
     }
 }

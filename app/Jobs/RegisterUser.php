@@ -54,9 +54,15 @@ class RegisterUser
      */
     private $facebookUsername;
 
+    /**
+     * @var string
+     */
+    private $avatar;
+
+
     public function __construct(string $name, string $email,
                                 string $username, string $ip, string $githubId, string $githubUsername,
-                                string $facebookId, string $facebookUsername)
+                                string $facebookId, string $facebookUsername, string $avatar)
     {
         $this->name = $name;
         $this->email = $email;
@@ -66,6 +72,7 @@ class RegisterUser
         $this->githubUsername = $githubUsername;
         $this->facebookId = $facebookId;
         $this->facebookUsername = $facebookUsername;
+        $this->avatar = $avatar;
     }
 
     public static function fromRequest(RegisterRequest $request): self
@@ -78,7 +85,8 @@ class RegisterUser
             $request->githubId(),
             $request->githubUsername(),
             $request->facebookId(),
-            $request->facebookUsername()
+            $request->facebookUsername(),
+            $request->avatar()
         );
     }
 
@@ -94,8 +102,9 @@ class RegisterUser
             'ip' => $this->ip,
             'github_id' => $this->githubId,
             'github_username' => $this->githubUsername,
-            'facebook_id' => $this->githubId,
-            'facebook_username' => $this->githubUsername,
+            'facebook_id' => $this->facebookId,
+            'facebook_username' => $this->facebookUsername,
+            'avatar' => $this->avatar,
             'confirmation_code' => str_random(60),
             'type' => User::DEFAULT,
             'remember_token' => '',

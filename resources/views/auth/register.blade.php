@@ -37,6 +37,7 @@
                 @error('rules')
             @endFormGroup
             {!! Form::hidden('third_type', 'github') !!}
+            {!! Form::hidden('avatar', session('githubData.avatar')) !!}
             {!! Form::hidden('third_id', session('githubData.id')) !!}
             {!! Form::hidden('github_username', session('githubData.username')) !!}
             {!! Form::submit('Register', ['class' => 'btn btn-primary btn-block']) !!}
@@ -69,6 +70,7 @@
         @error('rules')
         @endFormGroup
         {!! Form::hidden('third_type', 'facebook') !!}
+        {!! Form::hidden('avatar', session('facebookData.avatar')) !!}
         {!! Form::hidden('third_id', session('facebookData.id')) !!}
         {!! Form::hidden('facebook_username', session('facebookData.username')) !!}
         {!! Form::submit('Register', ['class' => 'btn btn-primary btn-block']) !!}
