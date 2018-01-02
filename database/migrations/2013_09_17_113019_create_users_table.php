@@ -9,8 +9,8 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('github_id')->default('');
-            $table->string('github_url')->default('');
+            $table->string('github_id')->default('')->nullable(true);
+            $table->string('github_url')->default('')->nullable(true);
             $table->string('email');
             $table->string('name');
 

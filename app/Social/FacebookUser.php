@@ -43,7 +43,7 @@ class FacebookUser implements Arrayable
             'id' => $this->get('id'),
             'name' => $this->get('name'),
             'email' => $this->get('email'),
-            'username' => $this->get('login'),
+            'username' => $this->get('nickname'),
         ];
     }
 }

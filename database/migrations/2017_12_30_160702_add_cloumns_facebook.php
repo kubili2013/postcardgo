@@ -14,8 +14,8 @@ class AddCloumnsFacebook extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('facebook_id', 64)->default('');
-            $table->string('facebook_username',64)->default('');
+            $table->string('facebook_id', 64)->nullable(true)->default('');
+            $table->string('facebook_username',64)->nullable(true)->default('');
         });
     }
 

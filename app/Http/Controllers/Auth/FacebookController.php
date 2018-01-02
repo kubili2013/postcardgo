@@ -28,7 +28,7 @@ class FacebookController extends Controller
     public function handleProviderCallback()
     {
         $socialiteUser = Socialite::driver('facebook')->user();
-
+        dd($socialiteUser);
         try {
             $user = User::findByFacebookId($socialiteUser->getId());
 
