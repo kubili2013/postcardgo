@@ -12,9 +12,10 @@ class FacebookUser implements Arrayable
      */
     private $attributes;
 
-    public function __construct(array $attributes)
+    public function __construct(array $attributes,$avatar)
     {
         $this->attributes = $attributes;
+        $this->attributes = array_merge($this->attributes,["avatar" => $avatar]);
     }
 
     public function isTooYoung(): bool

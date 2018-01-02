@@ -34,7 +34,7 @@ class FacebookController extends Controller
 
             return $this->userFound($user, $socialiteUser);
         } catch (ModelNotFoundException $exception) {
-            return $this->userNotFound(new FacebookUser($socialiteUser->user));
+            return $this->userNotFound(new FacebookUser($socialiteUser->user,$socialiteUser->avatar));
         }
     }
 
