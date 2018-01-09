@@ -17,7 +17,7 @@
     <script>
         window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!};
     </script>
-
+    @stack('top_script')
     @include('layouts._favicons')
     @include('layouts._google_analytics')
     @include('layouts._ads._ad_sense')
@@ -35,7 +35,7 @@
 <script src="{{ mix('build/js/app.js') }}"></script>
 
 @include('layouts._intercom')
-@stack('script')
+@stack('bottom_script')
 
 </body>
 </html>

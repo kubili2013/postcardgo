@@ -97,7 +97,7 @@
 @push('css')
 <link href="{{ asset('plugins/country-select/css/countrySelect.css') }}" rel="stylesheet">
 @endpush
-@push('script')
+@push('bottom_script')
 <script src="{{ asset('plugins/country-select/js/countrySelect.min.js') }}"></script>
 <script type="text/javascript">
     $(".country_selector").countrySelect({

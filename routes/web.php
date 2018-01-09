@@ -85,3 +85,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin', 'namespace' => 'Admin'], fun
     Route::get('postcard/{postcard}/update', 'PostcardController@edit')->where('postcard','[0-9]+')->name('.postcard.edit');
     Route::post('postcard/{postcard}/update', 'PostcardController@update')->where('postcard','[0-9]+')->name('.postcard.update');
 });
+// Paypal
+Route::post('/paypal/create', 'PaypalController@create')->name('paypal.payment.create');
+Route::post('/paypal/execute', 'PaypalController@execute')->name('paypal.payment.execute');
