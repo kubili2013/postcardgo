@@ -3,6 +3,7 @@
 // Home
 Route::get('/', ['as' => 'home', 'uses' => 'HomeController@show']);
 Route::get('rules', ['as' => 'rules', 'uses' => 'HomeController@rules']);
+Route::get('agreement', ['as' => 'user.agreement', 'uses' => 'HomeController@agreement']);
 Route::get('bin/{paste?}', 'HomeController@pastebin');
 
 // Authentication
@@ -88,3 +89,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin', 'namespace' => 'Admin'], fun
 // Paypal
 Route::post('/paypal/create', 'PaypalController@create')->name('paypal.payment.create');
 Route::post('/paypal/execute', 'PaypalController@execute')->name('paypal.payment.execute');
+
+// Postcards
+Route::get('postcard/{postcard}', ['as' => 'postcard.show', 'uses' => 'PostcardController@show']);
+Route::post('postcard/{postcard}', ['as' => 'postcard.update', 'uses' => 'PostcardController@update']);
+

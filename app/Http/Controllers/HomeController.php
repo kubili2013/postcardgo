@@ -14,6 +14,11 @@ class HomeController extends Controller
         return view('rules');
     }
 
+    public function agreement()
+    {
+        return view('agreement');
+    }
+
     public function pastebin(string $hash = '')
     {
         return redirect()->away("https://paste.laravel.io/$hash");

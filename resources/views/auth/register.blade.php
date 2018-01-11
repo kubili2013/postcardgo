@@ -4,10 +4,10 @@
 
 @section('small-content')
     @if (! session()->has('githubData') && ! session()->has('facebookData'))
-        <p>To register, we require you to login with your Github account. After login you can choose your password in the settings screen.</p>
+        <p>To register, we require you to login with your facebook account. After login you can choose your password in the settings screen.</p>
 
-        <a href="{{ route('login.github') }}" class="btn btn-default btn-block">
-            <i class="fa fa-github"></i> Github
+        <a href="{{ route('login.facebook') }}" class="btn btn-default btn-block">
+            <i class="fa fa-facebook-square"></i> Facebook
         </a>
     @elseif(session()->has('githubData'))
         {!! Form::open(['route' => 'register.post']) !!}

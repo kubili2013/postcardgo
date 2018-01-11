@@ -36,7 +36,7 @@
                     @endif
                 </td>
                 <td style="text-align:center;">
-                    <a href="{{ route('admin.postcard.edit', $postcard->id) }}" class="btn btn-xs btn-link">
+                    <a href="{{ route('postcard.show', $postcard->id) }}" class="btn btn-xs btn-link">
                         <i class="fa fa-gear"></i>
                     </a>
                 </td>
