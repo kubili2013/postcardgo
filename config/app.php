@@ -178,7 +178,8 @@ return [
         App\Spam\SpamServiceProvider::class,
         App\Validation\ValidationServiceProvider::class,
 
-        Srmklive\PayPal\Providers\PayPalServiceProvider::class
+        // Srmklive\PayPal\Providers\PayPalServiceProvider::class
+        'Ignited\LaravelOmnipay\LaravelOmnipayServiceProvider',
 
     ],
 
@@ -236,7 +237,8 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
-        'PayPal' => Srmklive\PayPal\Facades\PayPal::class
+        // 'PayPal' => Srmklive\PayPal\Facades\PayPal::class
+        'Omnipay' => 'Ignited\LaravelOmnipay\Facades\OmnipayFacade',
     ],
 
 ];

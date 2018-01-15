@@ -9,7 +9,7 @@ class ProfileController extends Controller
 {
     public function show(User $user)
     {
-        $postcards = $user->postcards()->paginate(10);
+        $postcards = $user->postcards()->orderBy("updated_at",'asc')->paginate(10);
         return view('users.profile', compact('user','postcards'));
     }
 

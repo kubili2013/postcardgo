@@ -21,5 +21,8 @@ class Payment extends Model
         'amount',
         'postcard_id'
     ];
-
+    public function postcard(): Postcard
+    {
+        return $this->belongsTo(Postcard::class, 'postcard_id');
+    }
 }

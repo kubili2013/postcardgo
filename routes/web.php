@@ -87,9 +87,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin', 'namespace' => 'Admin'], fun
     Route::post('postcard/{postcard}/update', 'PostcardController@update')->where('postcard','[0-9]+')->name('.postcard.update');
 });
 // Paypal
-Route::post('/paypal/create', 'PaypalController@create')->name('paypal.payment.create');
-Route::post('/paypal/execute', 'PaypalController@execute')->name('paypal.payment.execute');
-
+// Route::post('/paypal/create', 'PaypalController@create')->name('paypal.payment.create');
+// Route::post('/paypal/execute', 'PaypalController@execute')->name('paypal.payment.execute');
+Route::post('/paypal/topay', 'PaypalController@topay')->name('paypal.topay');
+Route::get('/paypal/callback', 'PaypalController@callback')->name('paypal.callback');
+Route::get('/paypal/cancel', 'PaypalController@cancel')->name('paypal.cancel');
 // Postcards
 Route::get('postcard/{postcard}', ['as' => 'postcard.show', 'uses' => 'PostcardController@show']);
 Route::post('postcard/{postcard}', ['as' => 'postcard.update', 'uses' => 'PostcardController@update']);

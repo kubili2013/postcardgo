@@ -30,7 +30,7 @@
     <div class="row">
         <div class="col-md-12">
 
-                @include('users._my_postcards', ['postcards' => Auth::user()->postcards()->paginate(10)])
+                @include('users._my_postcards', ['postcards' => $postcards])
 
         </div>
     </div>

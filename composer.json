@@ -14,10 +14,11 @@
         "laravelcollective/html": "5.5.*",
         "lasserafn/php-initial-avatar-generator": "^2.0",
         "league/commonmark": "^0.15.2",
-        "paypal/rest-api-sdk-php": "*",
         "roave/security-advisories": "dev-master",
         "spatie/laravel-robots-middleware": "^1.0",
-        "tijsverkoyen/akismet": "^1.1"
+        "tijsverkoyen/akismet": "^1.1",
+        "ignited/laravel-omnipay": "2.*",
+        "omnipay/paypal": "^2.6"
     },
     "require-dev": {
         "filp/whoops": "^2.1",

@@ -30,6 +30,7 @@
 
                         <div class="col-md-6">
                             {!! Form::text('country', "", ['class' => 'form-control country_selector', 'required']) !!}
+                            <span class="help-block">请选择你所在的国家</span>
                             @error('country')
                         </div>
                         @endFormGroup
@@ -39,6 +40,7 @@
 
                         <div class="col-md-6">
                             {!! Form::email('email', Auth::user()->emailAddress(), ['class' => 'form-control', 'required']) !!}
+                            <span class="help-block">明信片寄出,我们将往此邮箱发送一封通知邮件</span>
                             @error('email')
                         </div>
                         @endFormGroup
@@ -48,6 +50,7 @@
 
                         <div class="col-md-6">
                             {!! Form::text('real_name', "", ['class' => 'form-control', 'required']) !!}
+                            <span class="help-block">请填写收此明信片人的姓名</span>
                             @error('real_name')
                         </div>
                         @endFormGroup
@@ -57,7 +60,7 @@
 
                         <div class="col-md-6">
                             {!! Form::text('address', "", ['class' => 'form-control', 'rows' => 3, 'maxlength' => 160]) !!}
-                            <span class="help-block">Please</span>
+                            <span class="help-block">请填写你的地址,省市县街道</span>
                             @error('address')
                         </div>
                         @endFormGroup
@@ -67,7 +70,7 @@
 
                         <div class="col-md-6">
                             {!! Form::text('postcode', "", ['class' => 'form-control', 'rows' => 3, 'maxlength' => 160]) !!}
-                            <span class="help-block">Please</span>
+                            <span class="help-block">请填写你的邮政编码</span>
                             @error('postcode')
                         </div>
                         @endFormGroup
@@ -77,7 +80,7 @@
 
                         <div class="col-md-6">
                             {!! Form::textarea('message', "", ['class' => 'form-control', 'rows' => 3, 'maxlength' => 160]) !!}
-                            <span class="help-block">Please</span>
+                            <span class="help-block">填写寄语,请控制在160字符以内。</span>
                             @error('message')
                         </div>
                         @endFormGroup
