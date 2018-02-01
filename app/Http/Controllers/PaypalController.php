@@ -133,15 +133,15 @@ class PaypalController extends Controller
                 $payer->save();
             }
             $this->success('postcard.payed.success');
-            return view('users.dashboard');
+            return redirect(route('dashboard'));
         } else {
             $this->success('postcard.payed.fail');
-            return view('home');
+            return redirect(route('home'));
         }
     }
 
     public function cancel(){
-        $this->success('postcard.payed.cancel');
-        return view('home');
+        $this->success('postcard.payed.CANCEL');
+        return redirect('home');
     }
 }

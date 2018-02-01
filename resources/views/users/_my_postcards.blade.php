@@ -27,7 +27,7 @@
                 <td>
                     @if ($postcard->status == 'created')
                         <span class="label label-warning">{{$postcard->status}}</span>
-                    @elseif ($postcard->status == 'paid')
+                    @elseif ($postcard->status == 'payed')
                         <span class="label label-primary">{{$postcard->status}}</span>
                     @elseif ($postcard->status == 'sent')
                         <span class="label label-default">{{$postcard->status}}</span>
